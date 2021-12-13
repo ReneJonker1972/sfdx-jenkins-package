@@ -160,7 +160,7 @@ node {
             // -------------------------------------------------------------------------
 
             stage('Install Package In Scratch Org') {
-                rc = command "${toolbelt}\sfdx force:package:install --package ${PACKAGE_VERSION} --targetusername installorg --wait 10"
+                rc = command "${toolbelt}/sfdx force:package:install --package ${PACKAGE_VERSION} --targetusername installorg --wait 10"
                 if (rc != 0) {
                     error 'Salesforce package install failed.'
                 }
